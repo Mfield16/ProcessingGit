@@ -1,0 +1,8 @@
+*.java
+*.pdf
+*.png
+/modes
+/libraries
+/tools
+*/sketch.properties
+
