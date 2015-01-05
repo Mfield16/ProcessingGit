@@ -14,7 +14,7 @@ void setup() {
 void alias() {
   for (int yStartBlock = 0; yStartBlock < height; yStartBlock += blockSidePixels) {
     for (int xStartBlock = 0; xStartBlock < width; xStartBlock += blockSidePixels) {
-      float whiteFraction = fractionOfWhite(yStartBlock, xStartBlock);
+      float whiteFraction = fractionOfWhite(xStartBlock, yStartBlock);
       if (whiteFraction > .5) {
         setBlockColor(yStartBlock, xStartBlock, WHITE);
       } else {
@@ -23,3 +23,9 @@ void alias() {
     }
   }
 }
+
+
+float fractionOfWhite( int xStartBlock, int yStartBlock) {
+  return .5;
+}
+
