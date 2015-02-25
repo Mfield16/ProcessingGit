@@ -5,8 +5,13 @@ void setup() {
 void draw() {
 
   background(90);
+  fill(255, 2);
+  rect(0,0, width, height);
   fill(50, 200, 100);
-  ellipse(mouseX, mouseY, 50, 50);
+  float ballX, ballY;
+  ballX = width * noise(frameCount*.002);
+  ballY = height * noise(frameCount*.004);
+  ellipse(ballX, ballY, 50, 50);
   pushMatrix();
   fill(255);
   //  ellipse(width/2, height/2, 100, 100);
