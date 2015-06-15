@@ -1,8 +1,13 @@
 class Track {
   void draw() {
-    strokeWeight(width*.5);
-    noFill();
+    stroke(0);
+    strokeWeight(15);
+
     rectMode(CENTER);
-    rect(width/2,height/2);
+    noFill();
+    ellipse(0, 0, 400, 400);
+    rect(0, 0, 400, 400);
+    rect(0, 0, 10, 400);
+    rect(0, 0, 400, 10);
   }
 }
