@@ -3,11 +3,11 @@ class Car {
   float pixelsPerSecond = 2;
   float x = 0;
   float y = 0;
-  float carLength = 10;
-  float carWidth = 10;
-  float servoSensitivity = 15;
+  float carLength = 15;
+  float carWidth = 5;
+  float servoSensitivity = 10;
   int carColor;
-  boolean turnsLeftWhenOffTrack = random(1)<.5; 
+  boolean turnsLeftWhenOffTrack = random(1)<1; 
 
   boolean offTrack;
   Car() {

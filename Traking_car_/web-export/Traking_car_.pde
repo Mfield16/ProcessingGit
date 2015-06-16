@@ -1,11 +1,37 @@
+//Car car = new Car();
+ArrayList<Car> cars = new ArrayList<Car>();
+int numCars = 1000;
+int trackColor = color(random(255));
+Track track = new Track();
+void setup() {
+  size(500, 500);
+  for (int i = 0; i < numCars; ++i) {
+    cars.add(new Car());
+  }
+}
+void draw() {
+  background(255);
+  translate(width/2, height/2);
+  scale(1, -1);
+  track.draw();
+  for (Car car : cars) {
+    car.draw();
+  }
+}
+void mousePressed( ) {
+  for (Car car : cars) {
+    car.x = mouseX-width/2 + random(1);
+    car.y = height/2-mouseY + random(1);
+  }
+}
 class Car {
   float directionRadians = 0;
   float pixelsPerSecond = 2;
   float x = 0;
   float y = 0;
-  float carLength = 10;
-  float carWidth = 10;
-  float servoSensitivity = 15;
+  float carLength = 15;
+  float carWidth = 5;
+  float servoSensitivity = 10;
   int carColor;
   boolean turnsLeftWhenOffTrack = random(1)<.5; 
 
@@ -65,3 +91,17 @@ class Car {
     //    return get(xIndex, yIndex) != TRACK_COLOR;
   }
 }
+class Track {
+  void draw() {
+    stroke(0);
+    strokeWeight(15);
+
+    rectMode(CENTER);
+    noFill();
+    ellipse(0, 0, 400, 400);
+    rect(0, 0, 400, 400);
+    rect(0, 0, 10, 400);
+    rect(0, 0, 400, 10);
+  }
+}
+

@@ -1,6 +1,6 @@
 //Car car = new Car();
 ArrayList<Car> cars = new ArrayList<Car>();
-int numCars = 400;
+int numCars = 2000;
 int trackColor = color(random(255));
 Track track = new Track();
 void setup() {
@@ -20,7 +20,7 @@ void draw() {
 }
 void mousePressed( ) {
   for (Car car : cars) {
-    car.x = mouseX-width/2 + random(0.5);
-    car.y = height/2-mouseY + random(0.5);
+    car.x = mouseX-width/2 + random(1);
+    car.y = height/2-mouseY + random(1);
   }
 }
