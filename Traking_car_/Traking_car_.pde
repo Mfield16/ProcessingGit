@@ -1,6 +1,6 @@
 //Car car = new Car();
 ArrayList<Car> cars = new ArrayList<Car>();
-int numCars = 2000;
+int numCars = 4000;
 int trackColor = color(random(255));
 Track track = new Track();
 void setup() {
